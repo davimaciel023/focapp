@@ -28,6 +28,9 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/global.scss", "src/theme/variables.scss"]
+            },
             "assets": [
               {
                 "glob": "**/*",

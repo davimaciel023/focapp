@@ -7,9 +7,9 @@
 ---
 
 ## ✅ 1. Preparação Inicial
-- [ ] Instalar Node.js, Angular CLI e Ionic CLI
-- [ ] Criar o projeto com `ionic start focapp blank --type=angular`
-- [ ] Configurar Firebase e instalar AngularFire
+- [x] Instalar Node.js, Angular CLI e Ionic CLI
+- [x] Criar o projeto com `ionic start focapp blank --type=angular`
+- [x] Configurar Firebase e instalar AngularFire
 
 ---
 
@@ -17,13 +17,13 @@
 - [x] Definir identidade visual
 - [x] Planejar telas
 - [x] Gerar prompts e wireframes
-- [ ] (Opcional) Prototipar no Figma
+- [x] (Opcional) Prototipar no Figma
 
 ---
 
 ## 🧱 3. Arquitetura do Projeto
-- [ ] Criar estrutura de pastas (`/pages`, `/services`, `/models`, etc.)
-- [ ] Criar interfaces para dados (User, Task, etc.)
+- [x] Criar estrutura de pastas (`/pages`, `/services`, `/models`, etc.)
+- [x] Criar interfaces para dados (User, Task, etc.)
 
 ---
 
@@ -39,9 +39,9 @@
 ## 🏠 5. Dashboard e Navegação
 - [ ] Criar menu (lateral ou tab bar)
 - [ ] Tela inicial com:
-  - [ ] Tarefas do dia
-  - [ ] Progresso semanal
-  - [ ] Botão Pomodoro
+- [ ] Tarefas do dia
+- [ ] Progresso semanal
+- [ ] Botão Pomodoro
 
 ---
 
