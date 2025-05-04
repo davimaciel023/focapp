@@ -1,3 +1,24 @@
-<p>
-  dashboard works!
-</p>
+<ion-content class="dashboard">
+  <div class="header">
+    <div class="profile">
+      <img [src]="userPhotoUrl" alt="Foto do usuário">
+      <div class="info">
+        <h2>FOCAPP</h2>
+        <p>{{ userName }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <ion-card routerLink="/tasks" class="card tasks">Quick<br>Tasks</ion-card>
+    <ion-card routerLink="/subjects" class="card subjects">Access<br>Subjects</ion-card>
+    <ion-card routerLink="/materials" class="card materials">Subjects<br>Materials</ion-card>
+    <ion-card routerLink="/notes" class="card notes">Materials<br>Notes</ion-card>
+  </div>
+
+  <div class="pomodoro">
+    <h3>Pomodoro Timer</h3>
+    <!-- Pode ser um componente Pomodoro aqui -->
+    <!-- <app-pomodoro></app-pomodoro> -->
+  </div>
+</ion-content>

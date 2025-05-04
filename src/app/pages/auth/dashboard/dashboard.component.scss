@@ -1,0 +1,68 @@
+.dashboard {
+  --padding-start: 16px;
+  --padding-end: 16px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+
+    .profile {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+
+      .info h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .info p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 16px;
+
+    .card {
+      text-align: center;
+      height: 100px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+      background: linear-gradient(135deg, #e0e0ff, #ffffff);
+    }
+
+    .tasks    { background: linear-gradient(135deg, #6EE7B7, #3B82F6); }
+    .subjects { background: linear-gradient(135deg, #FDE68A, #F59E0B); }
+    .materials{ background: linear-gradient(135deg, #C084FC, #8B5CF6); }
+    .notes    { background: linear-gradient(135deg, #A5B4FC, #6366F1); }
+  }
+
+  .pomodoro {
+    margin-top: 24px;
+    padding: 16px;
+    text-align: center;
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+  }
+}
