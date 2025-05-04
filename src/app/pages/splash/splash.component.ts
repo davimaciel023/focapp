@@ -26,6 +26,6 @@ export class SplashComponent implements OnInit {
           this.router.navigate(['/login']);
         }
       });
-    }, 2500);
+    }, 1500);
   }
 }
