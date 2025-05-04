@@ -1,3 +1,4 @@
+import { IonHeader, IonContent, IonToolbar, IonTitle } from '@ionic/angular/standalone';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
