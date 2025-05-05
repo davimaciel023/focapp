@@ -30,7 +30,7 @@
 ## 🔐 4. Autenticação
 - [x] Splash Screen
 - [x] Tela de Login
-- [ ] Tela de Cadastro
+- [x] Tela de Cadastro
 - [ ] Recuperação de senha
 - [ ] Guard para rotas privadas
 

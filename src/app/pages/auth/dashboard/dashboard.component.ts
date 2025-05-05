@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Auth } from '@angular/fire/auth';
 import { IonicModule } from '@ionic/angular';
+import { UserService } from 'src/app/service/user/user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,13 +11,22 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule]
 })
 export class DashboardComponent  implements OnInit {
+  userName: string = '';
+  userPhotoUrl: string = 'assets/img/avatar.png';
 
-  constructor() { }
+  constructor(
+    private auth: Auth,
+    private userService: UserService
+  ) { }
 
-  ngOnInit() {}
-
-  userName: string = 'Student Name';
-  userPhotoUrl: string = 'assets/img/avatar.png'; // Pode vir do Firebase futuramente
-
+  async ngOnInit() {
+    const user = this.auth.currentUser;
+    if(user) {
+      const userDocSnap = await this.userService.getUserByUid(user.uid);
+      if(userDocSnap.exists()) {
+        this.userName = userDocSnap.data()['usuario'];
+      }
+    }
+  }
 
 }

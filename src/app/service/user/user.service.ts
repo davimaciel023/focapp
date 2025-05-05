@@ -1,6 +1,7 @@
 // src/app/service/user/user.service.ts
 import { Injectable } from '@angular/core';
 import { Firestore, doc, setDoc } from '@angular/fire/firestore';
+import { getDoc } from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -13,4 +14,11 @@ export class UserService {
     const userRef = doc(this.firestore, 'users', user.uid); // UID é o ID do documento
     return setDoc(userRef, user);
   }
+
+  getUserByUid(uid: string) {
+    const userDoc = doc(this.firestore, 'users', uid);
+    return getDoc(userDoc);
+  }
+
+
 }
