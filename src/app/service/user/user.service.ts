@@ -11,13 +11,13 @@ export class UserService {
   constructor(private firestore: Firestore) {}
 
   addUser(user: any) {
-    const userRef = doc(this.firestore, 'users', user.uid); // UID é o ID do documento
+    const userRef = doc(this.firestore, 'users', user.uid);
     return setDoc(userRef, user);
   }
 
   getUserByUid(uid: string) {
-    const userDoc = doc(this.firestore, 'users', uid);
-    return getDoc(userDoc);
+    const userDocRef = doc(this.firestore, `users/${uid}`);
+    return getDoc(userDocRef);
   }
 
 

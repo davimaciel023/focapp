@@ -1,7 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Auth } from '@angular/fire/auth';
-import { onAuthStateChanged } from 'firebase/auth';
+import { Auth, onAuthStateChanged } from '@angular/fire/auth';
 import { IonContent } from "@ionic/angular/standalone";
 
 @Component({
@@ -16,16 +15,17 @@ export class SplashComponent implements OnInit {
   private router = inject(Router);
 
   ngOnInit() {
-    setTimeout(() => {
-      console.log('Verificando estado de autenticación...');
-      onAuthStateChanged(this.auth, (user) => {
-        console.log('Estado de autenticación:', user);
+    // Aguarda a mudança real no estado de autenticação
+    onAuthStateChanged(this.auth, (user) => {
+      console.log('Estado de autenticação:', user);
+
+      setTimeout(() => {
         if (user) {
           this.router.navigate(['/dashboard']);
         } else {
           this.router.navigate(['/login']);
         }
-      });
-    }, 1500);
+      }, 1500); // a animação espera 1.5s antes de mudar
+    });
   }
 }

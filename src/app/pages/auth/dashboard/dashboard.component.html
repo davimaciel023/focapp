@@ -1,4 +1,4 @@
-<ion-content class="dashboard">
+<ion-content class="dashboard ion-padding">
   <div class="header">
     <div class="profile">
       <img [src]="userPhotoUrl" alt="Foto do usuário">
@@ -8,6 +8,8 @@
       </div>
     </div>
   </div>
+
+  <canvas *ngIf="userName" #barCanvas></canvas>
 
   <div class="grid">
     <ion-card routerLink="/tasks" class="card tasks">Tarefas<br>Rápidas</ion-card>
