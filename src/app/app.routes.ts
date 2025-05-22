@@ -18,6 +18,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/auth/register/register.component').then(m => m.RegisterComponent),
   },
   {
+    path: 'forgot-password',
+    loadComponent: () => import('./pages/auth/recover/recover.component').then(m => m.RecoverComponent),
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',
