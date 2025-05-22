@@ -8,18 +8,26 @@
   <ion-card>
     <ion-card-header>
       <ion-card-title>Esqueceu sua senha?</ion-card-title>
-      <ion-card-subtitle>Digite seu e-mail para redefinir.</ion-card-subtitle>
+      <ion-card-subtitle>Digite seu e-mail para redefinir sua senha.</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-input
+          type="email"
+          [(ngModel)]="email"
+          required
+          autocomplete="email"
+        ></ion-input>
       </ion-item>
 
-      <ion-button expand="block" (click)="recuperar()">Enviar</ion-button>
+      <ion-button expand="block" (click)="recuperar()">
+        Enviar Link de Recuperação
+      </ion-button>
+
       <ion-button expand="block" fill="clear" (click)="login()">
-        Voltar para o login
+        Voltar para o Login
       </ion-button>
     </ion-card-content>
   </ion-card>
