@@ -19,7 +19,7 @@
       <div class="msg__erro" *ngIf="form.get('password')?.errors && form.get('password')?.touched">
         Preencha as informações corretas
       </div>
-      <ion-button expand="block" (click)="login()">Login</ion-button>
+      <ion-button (click)="login()">Login</ion-button>
       <ion-button fill="clear" routerLink="/recover">Esqueci minha senha</ion-button>
       <ion-button (click)="register()">Criar conta</ion-button>
     </div>
