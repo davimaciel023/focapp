@@ -63,13 +63,13 @@ Focapp é um aplicativo mobile criado para auxiliar estudantes na organização 
 
 ### 🔹 Firebase
 - [x] Projeto criado no Firebase
-- [ ] Firestore configurado
-- [ ] Firebase Auth habilitado
+- [x] Firestore configurado
+- [x] Firebase Auth habilitado
 - [ ] Firebase Storage configurado
 - [ ] Regras de segurança definidas
 
 ### 🔹 Funcionalidades
-- [ ] Autenticação completa (login, cadastro, logout)
+- [x] Autenticação completa (login, cadastro, logout)
 - [ ] CRUD de tarefas
 - [ ] Organização por disciplina
 - [ ] Upload e listagem de materiais
@@ -79,54 +79,3 @@ Focapp é um aplicativo mobile criado para auxiliar estudantes na organização 
 - [ ] Testes manuais em dispositivos
 
 ---
-
-## 🧪 Como Rodar o Projeto
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/focapp.git
-   cd focapp
-
-
-🎨 Paleta de Cores Focapp
-1. Cor Primária – Azul Degradê
-💠 Hex: #0078D7
-
-💠 Uso: Botões principais, ícones ativos, destaques
-
-2. Cor Secundária – Roxo Vibrante
-💜 Hex: #6F42C1
-
-💜 Uso: Acentos, títulos, marcadores importantes
-
-3. Cor de Apoio – Azul Claro
-🔹 Hex: #4FC3F7
-
-🔹 Uso: Fundos leves, barras de progresso, componentes secundários
-
-4. Cor Neutra Escura – Texto Principal
-⚫ Hex: #1E1E2F
-
-⚫ Uso: Textos, ícones escuros
-
-5. Cor Neutra Clara – Fundo
-⚪ Hex: #F5F6FA
-
-⚪ Uso: Background principal do app
-
-6. Cor de Sucesso – Verde de Confirmação
-✅ Hex: #2ECC71
-
-✅ Uso: Tarefas concluídas, notificações positivas
-
-
-💡 Sugestão de Uso
-Header e Botões: #0078D7 (azul principal)
-
-Ações secundárias ou destaques visuais: #6F42C1
-
-Fundo do app: #F5F6FA com blocos brancos (#FFFFFF)
-
-Textos: #1E1E2F (principal) e #555 (secundário)
-
-Itens concluídos: #2ECC71

@@ -4,7 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Auth } from '@angular/fire/auth';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 import { UserService } from 'src/app/service/user/user.service';
 
 @Component({
@@ -51,6 +51,11 @@ export class RegisterComponent {
             email,
             createdAt: new Date()
           });
+
+          sendEmailVerification(user).then(() => {
+            alert(`Verificação enviada, confirme seu email!`)
+            this.router.navigate(["/login"])
+          })
 
           alert('Cadastro realizado com sucesso!');
           this.router.navigateByUrl('/login');
