@@ -43,7 +43,11 @@ export class RegisterComponent {
       createUserWithEmailAndPassword(this.auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log('Usuário registrado com sucesso:', user);
+
+          sendEmailVerification(user).then(() => {
+            alert(`Verificação enviada, confirme seu email!`)
+            this.router.navigate(["/login"])
+          })
 
           this.userService.addUser({
             uid: user.uid,
@@ -52,10 +56,6 @@ export class RegisterComponent {
             createdAt: new Date()
           });
 
-          sendEmailVerification(user).then(() => {
-            alert(`Verificação enviada, confirme seu email!`)
-            this.router.navigate(["/login"])
-          })
 
           alert('Cadastro realizado com sucesso!');
           this.router.navigateByUrl('/login');
